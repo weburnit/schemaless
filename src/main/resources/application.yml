@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: '@project.name@'
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQL9Dialect
+    hibernate:
+      ddl-auto: create
+    generate-ddl: true
+
+    properties:
+      hibernate:
+        show_sql: true
+        cache:
+          use_query_cache: true
+          use_second_level_cache: true
+          hazelcast:
+            use_native_client: true
+            native_client_address: localhost:5701
+            native_client_group: dev
+            native_client_password: dev-pass
+#          region:
+#            factory_class: com.hazelcast.hibernate.HazelcastCacheRegionFactory
+  datasource:
+    platform: postgres
+    url: jdbc:postgresql://localhost:5432/schemadb
+    username: paulaan
+    password: paulaan86
+    driver-class-name: org.postgresql.Driver

@@ -1,0 +1,11 @@
+version: '2'
+services:
+    progresql:
+        image: postgres
+        ports:
+            - "5432:5432"
+        environment:
+          - POSTGRES_USER=paulaan
+          - POSTGRES_PASSWORD=paulaan86
+          - POSTGRES_DB=schemadb
+
